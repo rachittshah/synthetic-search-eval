@@ -1,0 +1,42 @@
+{
+  "template_only": true,
+  "experiment_id": "menu-prefix-001",
+  "mode": "compare",
+  "hypothesis": "Prefix matching reduces failed vegetarian-menu searches on mobile.",
+  "primary_outcome": "independently verified task success within budget",
+  "minimum_worthwhile_difference": "set before measurement",
+  "variants": {"A": "http://127.0.0.1:8000/baseline", "B": "http://127.0.0.1:8000/candidate"},
+  "change_under_test": "ranking only; hold UI and corpus fixed",
+  "app_revision": "resolve before running",
+  "corpus_revision": "resolve before running",
+  "observation_channel": "screenshots and viewport-filtered accessibility",
+  "viewport": {"width": 390, "height": 844},
+  "locale": "en-US",
+  "model": "record exact provider/model identifier",
+  "prompt_hash": "record before running",
+  "browser_tool_versions": "record before running",
+  "seed": 42,
+  "order_policy": "seeded counterbalanced schedule, persisted in assignment ledger",
+  "allowed_origins": ["http://127.0.0.1:8000"],
+  "allowed_actions": ["search", "scroll", "open item details"],
+  "session_limits": {"seconds": 90, "actions": 25, "reformulations": 3, "scrolls": 5},
+  "batch_limits": {"sessions": 12, "concurrency": 2, "cost_ceiling": "set for chosen runner"},
+  "exposure_rule": "at least 50 percent visible for 500 ms; deduplicate within result instance",
+  "retry_policy": "retain failures; repair harness in separate batch",
+  "pilot": "one satisfiable and one impossible task per variant; exclude from measurement",
+  "scenario_origin": "illustrative expert hypotheses, not observed customer demand",
+  "scenarios": [
+    {
+      "scenario_id": "vegetarian-main",
+      "task": "Find a vegetarian main dish using mobile menu search.",
+      "worker_preferences": "Prefer a main dish over a side; stop if effort budget is exhausted.",
+      "private_oracle": "Verify selected item is a main dish and vegetarian in the trusted fixture; never infer dietary status from a name.",
+      "provenance": "invented illustration",
+      "split": "replace with reviewed held-out task"
+    }
+  ],
+  "assignment_ledger": "runs/menu-prefix-001/assignments.csv",
+  "artifact_root": "runs/menu-prefix-001/",
+  "terminal_records": "runs/menu-prefix-001/sessions.jsonl",
+  "calibration": "none yet; diagnostic synthetic evidence only"
+}

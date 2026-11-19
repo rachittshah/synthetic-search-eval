@@ -1,0 +1,4 @@
+interface:
+  display_name: "Synthetic Search Eval"
+  short_description: "Evaluate search through bounded browser sessions"
+  default_prompt: "Use $synthetic-search-eval to evaluate this search UI with evidence-backed tasks and a controlled comparison."

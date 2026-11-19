@@ -1,0 +1,5 @@
+experiment_id,scenario_id,pair_id,session_id,variant,model,seed,order,terminal_record_path
+example-only,task-one,task-one-rep-1,task-one-rep-1-A,A,resolve-model-version,101,1,runs/example-only/task-one-rep-1-A/terminal.json
+example-only,task-one,task-one-rep-1,task-one-rep-1-B,B,resolve-model-version,101,2,runs/example-only/task-one-rep-1-B/terminal.json
+example-only,task-two,task-two-rep-1,task-two-rep-1-B,B,resolve-model-version,102,1,runs/example-only/task-two-rep-1-B/terminal.json
+example-only,task-two,task-two-rep-1,task-two-rep-1-A,A,resolve-model-version,102,2,runs/example-only/task-two-rep-1-A/terminal.json
